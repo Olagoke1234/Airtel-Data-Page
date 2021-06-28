@@ -1,0 +1,494 @@
+#Menu-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed  ;
+    margin: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#Menu-wrap .toggler{
+position: absolute;
+top:0;
+right: 0;
+cursor: pointer;
+z-index: 3;
+width: 50px;
+height: 50px;
+opacity: 0;
+}
+
+#Menu-wrap .hamburger{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 880px){#Menu-wrap .hamburger
+    {
+        visibility: hidden;
+    }}
+
+    @media screen and (min-width: 881px) and (max-width: 1024px){#Menu-wrap .hamburger
+        {
+            visibility: hidden;
+            
+        }}
+
+    @media screen and (min-width: 1025px) {#Menu-wrap .hamburger
+        {
+            visibility: hidden;
+                
+        }}
+
+    #Menu-wrap .hamburger >div{
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background-color: #e40000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+    }
+
+    #Menu-wrap .hamburger >div:before{
+        content: "";
+        position: absolute;
+        top: -10px;
+        width: 100%;
+        height: 1px;
+        background-color: #e40000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #Menu-wrap .hamburger >div:after{
+        content: "MENU";
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #e40000;
+        font-size: 10px;
+    }
+
+
+    #Menu-wrap .toggler:checked +.hamburger >div{
+        transform: rotate(135deg);
+        background-color: black;
+    }
+
+    #Menu-wrap .toggler:checked +.hamburger >div:before{
+    top: 0;
+    transform: rotate(90deg);
+    background-color: black;
+    }
+
+    #Menu-wrap .toggler:checked +.hamburger >div:after{
+        content: " ";
+       opacity: 0;
+    }
+
+
+    #Menu-wrap #Menu{
+        position: relative;
+        margin-top: 65px;
+        left: 5px;  
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.8s ease;
+        
+     }
+
+     #Menu-wrap #Menu li{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+     }
+
+
+     @media screen and (min-width: 641px) and (max-width: 880px){#Menu-wrap #Menu
+        {
+            visibility: visible;
+            margin-top: 0px;
+            left: 0px;  
+            opacity: 1;
+        }}
+
+
+        @media screen and (min-width: 881px) and (max-width: 1024px){#Menu-wrap #Menu
+            {
+                visibility: visible;
+                margin-top: 0px;
+                left: 0px;  
+                opacity: 1;
+            }}
+
+
+            @media screen and (min-width: 1025px) {#Menu-wrap #Menu
+                {
+                    visibility: visible;
+                    margin-top: 0px;
+                    left: 0px;  
+                    opacity: 1;
+                }}
+
+    
+        @media screen and (min-width: 641px) and (max-width: 880px){#Menu-wrap #Menu ul
+        {
+                display: inline-flex;
+                flex-wrap: wrap;
+                padding-left: 120px;
+                padding-right: 60px;
+                width:100%;
+        }}
+
+
+        @media screen and (min-width: 881px) and (max-width: 1024px){#Menu-wrap #Menu ul
+            {
+                    display: inline-flex;
+                    flex-wrap: wrap;
+                    padding-left: 110px;
+                    padding-right: 50px;
+                    width:100%;
+            }}
+
+
+            @media screen and (min-width: 1025px) {#Menu-wrap #Menu ul
+                {
+                        display: inline-flex;
+                        flex-wrap: wrap;
+                        padding-left: 120px;
+                        padding-right: 50px;
+                        margin-left: 0px;
+                        width:100%;
+                }}
+    
+
+        @media screen and (min-width: 641px) and (max-width: 880px){#Menu-wrap #Menu ul li
+            {
+                padding: 5px;
+                list-style: none;
+               
+        }}
+
+        @media screen and (min-width: 881px) and (max-width: 1024px){#Menu-wrap #Menu ul li
+            {
+                padding: 10px;
+                list-style: none;
+               
+        }}
+
+
+        @media screen and (min-width: 1025px) {#Menu-wrap #Menu ul li
+            {
+                padding: 12px;
+                list-style: none;
+               
+        }}
+
+            
+
+        @media screen and (min-width: 641px) and (max-width: 880px){#Menu-wrap #Menu ul li a
+            {
+                font-size: 14px;
+                
+        }}
+
+        @media screen and (min-width: 881px) and (max-width: 1024px){#Menu-wrap #Menu ul li a
+            {
+                font-size: 16px;
+                
+        }}
+
+        @media screen and (min-width: 1025px) {#Menu-wrap #Menu ul li a
+            {
+                font-size: 18px;
+                
+        }}
+
+     #Menu-wrap .toggler:checked ~ #Menu{
+        visibility: visible;
+        opacity: 1;
+        margin-top: 70px;
+        margin-left: 0px;
+        background-color: ghostwhite;
+        height: 100vh;
+        width: 100vw;
+        overflow-y: hidden;
+    }
+        
+    #Menu-wrap #Menu li{
+         list-style: none;
+        padding: 15px;
+        }
+        
+        #Menu-wrap #Menu ul li:last-child a{
+            color:#e40000;
+        } 
+
+    #Menu-wrap #Menu li a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.3rem;
+    }
+
+
+    #More-Info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 880px){#More-Info
+        {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        }
+    }
+
+
+    @media screen and (min-width: 881px) and (max-width: 1024px){#More-Info
+        {
+        display: flex;
+        flex-direction: row;
+    }
+    }
+
+    @media screen and (min-width: 1025px) {#More-Info
+        {
+        display: flex;
+        flex-direction: row;
+        }
+    }
+    
+    #More-Info .More{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: space-between;        
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 880px){#More-Info .More
+        {
+           display: flex;
+           padding-left: 30px;
+        }
+        }
+
+        @media screen and (min-width: 881px) and (max-width: 1024px){#More-Info .More
+            {
+                display: flex;
+                padding-left: 35px;
+            }
+            }
+
+            @media screen and (min-width: 1025px) {#More-Info .More
+                {
+                    display: flex;
+                    padding-left: 40px;
+                }
+                }
+
+        
+    #More-Info .More >div li {
+        list-style: none;
+        padding-bottom: 0px;
+        padding-left: 8px;
+    }
+    
+
+    #More-Info .More >div li a{
+        text-decoration: none;
+        color: black;
+        font-size: 13px;
+    }
+    
+    #More-Info .More .toggle{
+        position: absolute;
+        cursor: pointer;
+        top:0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        z-index: 3; 
+        opacity: 0;
+        
+    }
+    
+
+        #More-Info .More .hamburger{
+        position: absolute;
+        top:0;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    @media screen and (min-width: 641px) and (max-width: 880px){#More-Info .More .hamburger
+        {
+            visibility: hidden;
+        }
+    }
+
+    @media screen and (min-width: 881px) and (max-width: 1024px){#More-Info .More .hamburger
+        {
+            visibility: hidden;
+        }
+    }
+
+    @media screen and (min-width: 1025px) {#More-Info .More .hamburger
+        {
+            visibility: hidden;
+        }
+    }
+
+
+
+
+    #More-Info .More .hamburger >div{
+       position: relative;
+       width: 60%;
+       height: 1px;
+       background-color: black;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+        
+    }
+
+    
+    #More-Info .More .hamburger >div:after{
+        content: "";
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        height: 1px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        transform: rotate(90deg);
+    }
+    
+    
+    #More-Info .More .toggle:checked +.hamburger >div{
+        transform: rotate(180deg);
+    }
+    
+    
+    #More-Info .More .toggle:checked +.hamburger >div:after{
+        top: 0;
+        transform: rotate(180deg);
+    }
+
+   
+    #More-Info .More .Menu{
+        position: relative;
+        visibility: hidden;
+        top:0;
+        left: 0;
+        transition: all 0.4s ease;
+        height: 0px;
+        background-color: white;
+        }
+
+        @media screen and (min-width: 641px) and (max-width: 880px){#More-Info .More .Menu
+            {
+                width: 150px;
+                visibility: visible;
+            }
+            }
+    
+        @media screen and (min-width: 881px) and (max-width: 1024px){#More-Info .More .Menu
+            {
+                width: 150px;    
+                visibility: visible;
+            }
+            }
+    
+    
+            @media screen and (min-width: 1025px) {#More-Info .More .Menu
+                {
+                    width: 150px;
+                    visibility: visible;
+                }
+                }
+
+    #More-Info .More .Menu li{
+        list-style: none;
+        padding-left: 10px;
+        
+    }
+
+    #More-Info .More .Menu li a{
+        text-decoration: none;
+        color: #e40000;
+        font-size: 16px;
+    }
+
+
+    @media screen and (min-width: 641px) and (max-width: 880px){#More-Info .More .Menu li a
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 10px;
+            color: black;
+            font-weight: lighter;
+        }
+        }
+
+    @media screen and (min-width: 881px) and (max-width: 1024px){#More-Info .More .Menu li a
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            color: black;
+            font-weight: lighter;
+        }
+        }
+
+
+        @media screen and (min-width: 1025px) {#More-Info .More .Menu li a
+            {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 14px;
+                color: black;
+                font-weight: lighter;
+            }
+            }
+
+    #More-Info  .toggle:checked ~.Menu {
+        visibility: visible;
+        height: 140px;
+        margin-top: 10px;
+        width: 100%;
+        left: 0;
+        
+    }
+
+    
